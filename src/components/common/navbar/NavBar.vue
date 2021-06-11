@@ -1,23 +1,33 @@
 <template>
-    <div class="navbar">
-        <h2>yutg678gyhgj</h2>
+    <div class="nav-bar">
+        <div class="left"><slot name="left"></slot></div>
+        <div class="center"><slot name="center"></slot></div>
+        <div class="right"><slot name="right"></slot></div>
     </div>
 </template>
 
 <script>
 
 export default({
-    
+    data() {
+        return {
+
+        }
+    }
 })
 </script>
 
-<style scoped>
-.navbar {
-    display: flex;
-    background-color: #e0e0e0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    box-shadow: 0 -1px 1px rgba(100,100,100,.2);
-}
+<style lang="less" scoped>
+    .nav-bar {
+        display: flex;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        .left, .right {
+            width: 60px;
+        }
+        .center {
+            flex: 1;
+        }
+    }
 </style>
